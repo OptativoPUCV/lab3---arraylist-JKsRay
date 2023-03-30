@@ -88,5 +88,5 @@ void clean(ArrayList * l)
   free(l->data);
   l->capacity = 2;
   l->size = 0;
-  nuevaLista->data = (void**) malloc(sizeof(void*));
+  l->data = (void**) malloc(sizeof(void*));
 }
