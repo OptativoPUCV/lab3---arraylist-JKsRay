@@ -213,3 +213,83 @@ Thu 30 Mar 2023 04:18:22 PM UTC:
  tests:  11|1
 total_score: 50/70
 3d0597f
+Thu 30 Mar 2023 04:22:29 PM UTC: 
+ arraylist.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘clean’:
+arraylist.c:88:3: error: expected declaration specifiers before ‘free’
+   88 |   free(l->data);
+      |   ^~~~
+arraylist.c:89:3: error: expected declaration specifiers before ‘l’
+   89 |   l->capacity = 2;
+      |   ^
+arraylist.c:90:3: error: expected declaration specifiers before ‘l’
+   90 |   l->size = 0;
+      |   ^
+arraylist.c:91:3: error: expected declaration specifiers before ‘nuevaLista’
+   91 |   nuevaLista->data = (void**) malloc(sizeof(void*));
+      |   ^~~~~~~~~~
+arraylist.c:92:1: error: expected declaration specifiers before ‘}’ token
+   92 | }
+      | ^
+test.c:9:1: error: parameter ‘test_id’ is initialized
+    9 | int test_id = -1;
+      | ^~~
+test.c:12:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   12 | int success(){
+      |              ^
+test.c:17:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   17 | void err_msg(char* msg){
+      |                        ^
+test.c:24:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   24 | void ok_msg(char* msg){
+      |                       ^
+test.c:30:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   30 | void info_msg(char* msg){
+      |                         ^
+test.c:35:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   35 | int test_suite(int(*test)(), char* msg, int max_score, int id, int req_id){
+      |                                                                           ^
+test.c:51:31: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   51 | ArrayList* initialize_exList(){
+      |                               ^
+test.c:66:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   66 | ArrayList* initialize_emptyList(){
+      |                                  ^
+test.c:76:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   76 | int test_create(){
+      |                  ^
+test.c:92:30: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   92 | void print_list(ArrayList* l){
+      |                              ^
+test.c:100:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  100 | int test_append(){
+      |                  ^
+test.c:156:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  156 | int test_push(){
+      |                ^
+test.c:213:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  213 | int test_pop(){
+      |               ^
+test.c:270:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  270 | int test_get(){
+      |               ^
+test.c:304:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  304 | int test_clean(){
+      |                 ^
+test.c:323:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  323 | int test_all(){
+      |               ^
+test.c:411:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  411 | int main( int argc, char *argv[] ) {
+      |                                    ^
+In file included from test.c:5:
+arraylist.c:87:6: error: old-style parameter declarations in prototyped function definition
+   87 | void clean(ArrayList * l)
+      |      ^~~~~
+test.c:434: error: expected ‘{’ at end of input
+  434 | }
+      | 
+Compilation failed
+6186d13
