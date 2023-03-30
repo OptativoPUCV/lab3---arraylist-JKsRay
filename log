@@ -549,3 +549,9 @@ arraylist.c:19:38: error: ‘l’ undeclared (first use in this function)
 arraylist.c:19:38: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 4519b2b
+Thu 30 Mar 2023 04:25:15 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  16|0
+total_score: 70/70
+dc534d7
