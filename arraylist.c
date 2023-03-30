@@ -11,7 +11,7 @@ typedef struct ArrayList {
 } ArrayList;
 
 ArrayList *createList(void) {
-  Arraylist *nuevaLista = (Arraylist*) malloc(sizeof(Arraylist));
+  ArrayList *nuevaLista = (ArrayList*) malloc(sizeof(ArrayList));
   if(nuevaLista == NULL) EXIT_FAILURE;
 
   nuevaLista->capacity = 2;
