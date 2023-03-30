@@ -16,7 +16,7 @@ ArrayList *createList(void) {
 
   nuevaLista->capacity = 2;
   nuevaLista->size = 0;
-  nuevaLista->data = (void*) malloc(sizeof(void));
+  nuevaLista->data = (void**) malloc(sizeof(void*));
   
     return nuevaLista;
 }
@@ -25,7 +25,7 @@ void append(ArrayList * l, void * data){
   if(l->size == l->capacity)
   {
     l->capacity *= 2;
-    l->data = (void*) realloc(l->data,l->capacity * sizeof(void));
+    l->data = (void*) realloc(l->data,l->capacity * sizeof(void*));
   }
 
   l->data[l->size] = data;
@@ -50,11 +50,22 @@ void push(ArrayList * l, void * data, int i){
 }
 
 void* pop(ArrayList * l, int i){
+
+  
     return NULL;
 }
 
 void* get(ArrayList * l, int i){
-    return NULL;
+  if(i >= l->size) return NULL;
+
+  if(i < 0)
+  {
+    i = l->size + i;
+  }
+
+  if(i < 0 || i >= l->size) return NULL;
+    
+  return l->data[i];
 }
 
 int get_size(ArrayList * l){
