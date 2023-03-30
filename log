@@ -183,3 +183,27 @@ arraylist.c:69:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 fb9d5db
+Thu 30 Mar 2023 04:18:02 PM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:67:12: error: expected ‘;’ before ‘:’ token
+   67 |   l->size--:
+      |            ^
+      |            ;
+arraylist.c:60:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   60 |   void *aux = l->data[i];
+      |         ^~~
+arraylist.c: In function ‘get’:
+arraylist.c:77:20: error: expected ‘)’ before ‘l’
+   77 |   if(i < 0 || i >=1 l->size) return NULL;
+      |     ~              ^~
+      |                    )
+arraylist.c: In function ‘pop’:
+arraylist.c:69:1: error: control reaches end of non-void function [-Werror=return-type]
+   69 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0f9341f
