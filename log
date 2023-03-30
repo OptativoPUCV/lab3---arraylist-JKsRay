@@ -93,3 +93,31 @@ Thu 30 Mar 2023 04:03:51 PM UTC:
  tests:  8|2
 total_score: 40/70
 e1e80b6
+Thu 30 Mar 2023 04:17:06 PM UTC: 
+ arraylist.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:58:20: error: expected ‘)’ before ‘l’
+   58 |   if(i < 0 || i >=1 l->size) return NULL;
+      |     ~              ^~
+      |                    )
+arraylist.c:67:12: error: expected ‘;’ before ‘:’ token
+   67 |   l->size++:
+      |            ^
+      |            ;
+arraylist.c:60:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   60 |   void *aux = l->data[i];
+      |         ^~~
+arraylist.c: In function ‘get’:
+arraylist.c:77:20: error: expected ‘)’ before ‘l’
+   77 |   if(i < 0 || i >=1 l->size) return NULL;
+      |     ~              ^~
+      |                    )
+arraylist.c: In function ‘pop’:
+arraylist.c:69:1: error: control reaches end of non-void function [-Werror=return-type]
+   69 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+fb619a8
