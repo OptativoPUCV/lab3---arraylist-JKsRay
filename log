@@ -6,3 +6,35 @@ Wed 29 Mar 2023 09:16:59 PM UTC:
  tests:  0|6
 total_score: 0/70
 d3ac483
+Thu 30 Mar 2023 02:57:25 AM UTC: 
+ arraylist.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:14:3: error: unknown type name ‘Arraylist’; did you mean ‘ArrayList’?
+   14 |   Arraylist *nuevaLista = (Arraylist*) malloc(sizeof(Arraylist));
+      |   ^~~~~~~~~
+      |   ArrayList
+arraylist.c:14:28: error: ‘Arraylist’ undeclared (first use in this function); did you mean ‘ArrayList’?
+   14 |   Arraylist *nuevaLista = (Arraylist*) malloc(sizeof(Arraylist));
+      |                            ^~~~~~~~~
+      |                            ArrayList
+arraylist.c:14:28: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:14:38: error: expected expression before ‘)’ token
+   14 |   Arraylist *nuevaLista = (Arraylist*) malloc(sizeof(Arraylist));
+      |                                      ^
+arraylist.c:17:13: error: request for member ‘capacity’ in something not a structure or union
+   17 |   nuevaLista->capacity = 2;
+      |             ^~
+arraylist.c:18:13: error: request for member ‘size’ in something not a structure or union
+   18 |   nuevaLista->size = 0;
+      |             ^~
+arraylist.c:19:13: error: request for member ‘data’ in something not a structure or union
+   19 |   nuevaLista->data = (void*) malloc(sizeof(void));
+      |             ^~
+arraylist.c:21:12: error: returning ‘int *’ from a function with incompatible return type ‘ArrayList *’ {aka ‘struct ArrayList *’} [-Werror=incompatible-pointer-types]
+   21 |     return nuevaLista;
+      |            ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+413a8ce
